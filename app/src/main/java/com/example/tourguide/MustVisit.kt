@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.tourguide.adapters.RecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_must_visit.*
 
@@ -27,24 +28,27 @@ class MustVisit : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_must_visit, container, false)
-    }
+        val mView = inflater.inflate(R.layout.fragment_must_visit, container, false)
+        val recyclerViewMust = mView.findViewById<RecyclerView>(R.id.recylerViewMustVisit)
 
-    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        init_data()
-    }*/
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
         if(do_list){
-            init_data()
-            do_list=false
+            initData()
+            do_list = false
         }
-        init_recyclerView()
+
+        recyclerViewMust.layoutManager=LinearLayoutManager(this.context)
+        recyclerViewMust.adapter=
+            RecyclerViewAdapter(
+                mImages,
+                mNames,
+                mInfo,
+                mAdress,
+                mNumber
+            )
+        return mView
     }
 
-    private fun init_data()
+    private fun initData()
     {
         mImages.add(R.drawable.artinst)
         mNames.add("Art Institute of Chicago")
@@ -69,18 +73,5 @@ class MustVisit : Fragment() {
         mInfo.add(R.string.info_zoo)
         mAdress.add("2204 N. Cannon Drive, Chicago, Illinois, United States")
         mNumber.add("+13127422000")
-    }
-
-    private fun init_recyclerView()
-    {
-        recylerViewMustVisit.layoutManager=LinearLayoutManager(this.context)
-        recylerViewMustVisit.adapter=
-            RecyclerViewAdapter(
-                mImages,
-                mNames,
-                mInfo,
-                mAdress,
-                mNumber
-            )
     }
 }

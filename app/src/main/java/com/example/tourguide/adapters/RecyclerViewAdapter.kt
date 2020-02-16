@@ -20,7 +20,7 @@ class RecyclerViewAdapter(
 ):
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    open class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         val imageView=itemView.findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.imageView)
         val mName=itemView.findViewById<TextView>(R.id.text_view_name)
