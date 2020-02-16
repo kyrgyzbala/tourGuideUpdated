@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Chicago Tourist Guide</string>
+    <string name="tab_text_1">Must Visit</string>
+    <string name="tab_text_2">Towers</string>
+    <string name="tab_text_3">Restaurants</string>
+
+    <string name="info_art_institute">No visit to Chicago is complete without a trip to the Art Institute, the crown jewel in the city’s cultural scene. The museum has more than 300,000 works in its permanent collection, spanning many different movements such as the Renaissance and Surrealism. Expect to see quintessential pieces by Edward Hopper, van Gogh, Picasso, Monet and Cézanne, plus a vast array of sculptures, ceramics and contemporary pieces. It also boasts a stellar selection of rotating exhibitions that are well worth checking into ahead of your trip to plan accordingly. Book a fast-pass ticket before arriving to skip the lines.</string>
+    <string name="info_mus_science">As one of the largest science museums in the world, the Museum of Science and Industry meticulously curates every installation, exhibit and showcase to pique curiosity and inquiry. Housed in a building constructed during the World’s Columbian Exposition in 1893, this vast institution offers an immersive experience into history, technology and the natural world. Exhibits include Science Storms, U-505 Submarine: 75 Stories, Coal Mine, Numbers in Nature: A Mirror Maze and more. Check out the website to purchase tickets and find details on the seasonal programming and exhibits.
+</string>
+    <string name="info_shedd">The Shedd Aquarium is home to approximately 32,000 animals, including sea otters, sharks, frogs, penguins and beluga whales, not to mention a multitude of different fish and coral species. The aquarium is divided into different geographical exhibits and offers a comprehensive daily schedule that includes spotlight sessions on various species, live dives and feedings, along with look-and-learn experiences. With so many activities and programming, this is easily a full-day excursion. Buying tickets in advance is strongly recommended.
+</string>
+    <string name="info_zoo">Lincoln Park Zoo is a 35 acre (14 ha) zoo in Lincoln Park, Chicago, Illinois. The zoo was founded in 1868, making it one of the oldest zoos in North America. It is also one of a few free admission zoos in the United States.[5] The zoo is an accredited member of the Association of Zoos and Aquariums (AZA).
+Lincoln Park Zoo is home to a wide variety of animals. The zoo\'s exhibits include big cats, polar bears, penguins, gorillas, reptiles, monkeys, and other species totaling about 1,100 animals from some 200 species. Also located in Lincoln Park Zoo is a burr oak tree which dates to 1830, three years before the town of Chicago was incorporated</string>
+
+    <string name="info_skydeck">One of the many things Chicago excels at is offering its visitors awe-inspiring 360-degree views of the city. For this reason alone, the Willis Tower’s renowned Skydeck is a must-visit. Located on the building’s 103rd floor 1,353 feet (412 meters) above the city, it’s the tallest spot to sightsee in Chicago – short of taking a helicopter ride. An ideal locale for an Instagram snap or two, the Skydeck provides views that are breathtaking from every angle – including down. As it’s hugely popular, expect long lines for this experience.
+</string>
+
+    <string name="title_choose">Open with</string>
+    <string name="def_text">Nurmukhamed</string>
+</resources>
