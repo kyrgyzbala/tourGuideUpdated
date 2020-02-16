@@ -35,15 +35,13 @@ class MoreInfoActivity : AppCompatActivity() {
         numberTextView.paintFlags = Paint.UNDERLINE_TEXT_FLAG
 
         addressText.setOnClickListener {
-            val mapIntent = Intent(Intent.ACTION_VIEW)
+            val mapIntent = Intent(Intent.ACTION_DEFAULT)
             mapIntent.data = Uri.parse("geo:0,0?q=$mAddress")
 
             val title = resources.getString(R.string.title_choose)
             val chooser = Intent.createChooser(mapIntent,title)
 
-            if (mapIntent.resolveActivity(packageManager) != null) {
-                startActivity(chooser)
-            }
+            startActivity(chooser)
         }
 
         numberTextView.setOnClickListener {
