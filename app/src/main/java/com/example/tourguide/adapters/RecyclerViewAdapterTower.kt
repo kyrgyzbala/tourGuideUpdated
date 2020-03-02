@@ -10,23 +10,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tourguide.MoreInfoActivity
 import com.example.tourguide.R
 
-class RecyclerViewAdapterTower(private val mImages: ArrayList<Int>,
-                               private val mNames: ArrayList<String>,
-                               private val mInfo: ArrayList<Int>,
-                               private val mAddress: ArrayList<String>,
-                               private val mNumbers:ArrayList<String>): RecyclerView.Adapter<RecyclerViewAdapterTower.ViewHolderTower>() {
+class RecyclerViewAdapterTower(
+    private val mImages: ArrayList<Int>,
+    private val mNames: ArrayList<String>,
+    private val mInfo: ArrayList<Int>,
+    private val mAddress: ArrayList<String>,
+    private val mNumbers: ArrayList<String>
+) : RecyclerView.Adapter<RecyclerViewAdapterTower.ViewHolderTower>() {
 
-    class ViewHolderTower(itemView: View) : RecyclerViewAdapter.ViewHolder(itemView)
-    {
-        val imageViewT=itemView.findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.imageViewTower)
-        val mNameT=itemView.findViewById<TextView>(R.id.text_view_name_tower)
-        val mLayoutT=itemView.findViewById<RelativeLayout>(R.id.list_items_layout_tower)
-        val mContextT= itemView.context
+    class ViewHolderTower(itemView: View) : RecyclerViewAdapter.ViewHolder(itemView) {
+        val imageViewT =
+            itemView.findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.imageViewTower)
+        val mNameT = itemView.findViewById<TextView>(R.id.text_view_name_tower)
+        val mLayoutT = itemView.findViewById<RelativeLayout>(R.id.list_items_layout_tower)
+        val mContextT = itemView.context
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderTower {
         return ViewHolderTower(
-            LayoutInflater.from(parent.context).inflate(R.layout.list_items_tower,parent,false)
+            LayoutInflater.from(parent.context).inflate(R.layout.list_items_tower, parent, false)
         )
     }
 
@@ -41,11 +43,11 @@ class RecyclerViewAdapterTower(private val mImages: ArrayList<Int>,
 
         holder.mLayoutT.setOnClickListener {
             val tIntent = Intent(holder.mContextT, MoreInfoActivity::class.java).apply {
-                putExtra("INFO",mInfo[position])
-                putExtra("NAME",mNames[position])
-                putExtra("IMAGE",mImages[position])
-                putExtra("ADDRESS",mAddress[position])
-                putExtra("NUMBER",mNumbers[position])
+                putExtra("INFO", mInfo[position])
+                putExtra("NAME", mNames[position])
+                putExtra("IMAGE", mImages[position])
+                putExtra("ADDRESS", mAddress[position])
+                putExtra("NUMBER", mNumbers[position])
             }
             holder.mContextT.startActivity(tIntent)
         }

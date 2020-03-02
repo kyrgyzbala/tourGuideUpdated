@@ -9,19 +9,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tourguide.adapters.RecyclerViewAdapterRest
-import kotlinx.android.synthetic.main.fragment_must_visit.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class Restaurants : Fragment() {
+class RestaurantsFragment : Fragment() {
 
     private val mImages:ArrayList<Int> = ArrayList()
     private val mNames:ArrayList<String> = ArrayList()
     private val mInfo:ArrayList<Int> = ArrayList()
     private val mAdress:ArrayList<String> = ArrayList()
     private val mNumber:ArrayList<String> = ArrayList()
-    private var do_list:Boolean= true
+    private var doList:Boolean= true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,9 +31,9 @@ class Restaurants : Fragment() {
 
         val rRecyclerView = rView.findViewById<RecyclerView>(R.id.recylerViewRest)
 
-        if(do_list){
+        if(doList){
             initData()
-            do_list = false
+            doList = false
         }
 
         rRecyclerView.layoutManager = LinearLayoutManager(rView.context)

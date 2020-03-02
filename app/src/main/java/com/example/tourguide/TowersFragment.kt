@@ -13,14 +13,14 @@ import com.example.tourguide.adapters.RecyclerViewAdapterTower
 /**
  * A simple [Fragment] subclass.
  */
-class Towers : Fragment() {
+class TowersFragment : Fragment() {
 
-    private val mImages:ArrayList<Int> = ArrayList()
-    private val mNames:ArrayList<String> = ArrayList()
-    private val mInfo:ArrayList<Int> = ArrayList()
-    private val mAdress:ArrayList<String> = ArrayList()
-    private val mNumber:ArrayList<String> = ArrayList()
-    private var do_list:Boolean= true
+    private val mImages: ArrayList<Int> = ArrayList()
+    private val mNames: ArrayList<String> = ArrayList()
+    private val mInfo: ArrayList<Int> = ArrayList()
+    private val mAddress: ArrayList<String> = ArrayList()
+    private val mNumber: ArrayList<String> = ArrayList()
+    private var doList: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,48 +31,47 @@ class Towers : Fragment() {
 
         val tRecyclerView = tView.findViewById<RecyclerView>(R.id.recylerViewTower)
 
-        if(do_list){
+        if (doList) {
             initData()
-            do_list = false
+            doList = false
         }
 
-        tRecyclerView.layoutManager=LinearLayoutManager(this.context)
-        tRecyclerView.adapter=
+        tRecyclerView.layoutManager = LinearLayoutManager(this.context)
+        tRecyclerView.adapter =
             RecyclerViewAdapterTower(
                 mImages,
                 mNames,
                 mInfo,
-                mAdress,
+                mAddress,
                 mNumber
             )
 
         return tView
     }
 
-    private fun initData()
-    {
+    private fun initData() {
         mImages.add(R.drawable.skydeck)
         mNames.add("Skydeck at Willis Tower")
         mInfo.add(R.string.info_skydeck)
-        mAdress.add("233 South Wacker Drive, Chicago Loop, Chicago, Illinois, 60606, USA")
+        mAddress.add("233 South Wacker Drive, Chicago Loop, Chicago, Illinois, 60606, USA")
         mNumber.add("+13128759696")
 
         mImages.add(R.drawable.trump)
         mNames.add("Trump Tower Chicago")
         mInfo.add(R.string.info_trump)
-        mAdress.add("401 N. Wabash Ave, Chicago, Illinois, United States")
+        mAddress.add("401 N. Wabash Ave, Chicago, Illinois, United States")
         mNumber.add("+13125888000")
 
         mImages.add(R.drawable.john)
         mNames.add("John Hancock Tower Chicago")
         mInfo.add(R.string.info_john)
-        mAdress.add("875 N Michigan Ave, Chicago, IL 60611, United States")
+        mAddress.add("875 N Michigan Ave, Chicago, IL 60611, United States")
         mNumber.add("+18003951113 ")
 
         mImages.add(R.drawable.tribune)
         mNames.add("Tribune Tower Chicago")
         mInfo.add(R.string.info_tribune)
-        mAdress.add("435 Michigan Ave, Chicago, IL 60611, United States")
+        mAddress.add("435 Michigan Ave, Chicago, IL 60611, United States")
         mNumber.add("+13122223994")
     }
 

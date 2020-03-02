@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.tourguide.MustVisit
+import com.example.tourguide.MustVisitFragment
 import com.example.tourguide.R
-import com.example.tourguide.Restaurants
-import com.example.tourguide.Towers
+import com.example.tourguide.RestaurantsFragment
+import com.example.tourguide.TowersFragment
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
@@ -28,9 +28,9 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
 
         return when(position)
         {
-            0->MustVisit()
-            1->Towers()
-            2->Restaurants()
+            0->MustVisitFragment()
+            1->TowersFragment()
+            2->RestaurantsFragment()
             else->{
                 PlaceholderFragment.newInstance(position + 1)
             }

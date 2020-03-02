@@ -2,26 +2,25 @@ package com.example.tourguide
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tourguide.adapters.RecyclerViewAdapter
-import kotlinx.android.synthetic.main.fragment_must_visit.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class MustVisit : Fragment() {
+class MustVisitFragment : Fragment() {
 
-    private val mImages:ArrayList<Int> = ArrayList()
-    private val mNames:ArrayList<String> = ArrayList()
-    private val mInfo:ArrayList<Int> = ArrayList()
-    private val mAdress:ArrayList<String> = ArrayList()
-    private val mNumber:ArrayList<String> = ArrayList()
-    private var do_list:Boolean= true
+    private val mImages: ArrayList<Int> = ArrayList()
+    private val mNames: ArrayList<String> = ArrayList()
+    private val mInfo: ArrayList<Int> = ArrayList()
+    private val mAdress: ArrayList<String> = ArrayList()
+    private val mNumber: ArrayList<String> = ArrayList()
+    private var doLIst: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,13 +30,13 @@ class MustVisit : Fragment() {
         val mView = inflater.inflate(R.layout.fragment_must_visit, container, false)
         val recyclerViewMust = mView.findViewById<RecyclerView>(R.id.recylerViewMustVisit)
 
-        if(do_list){
+        if (doLIst) {
             initData()
-            do_list = false
+            doLIst = false
         }
 
-        recyclerViewMust.layoutManager=LinearLayoutManager(this.context)
-        recyclerViewMust.adapter=
+        recyclerViewMust.layoutManager = LinearLayoutManager(this.context)
+        recyclerViewMust.adapter =
             RecyclerViewAdapter(
                 mImages,
                 mNames,
@@ -48,8 +47,7 @@ class MustVisit : Fragment() {
         return mView
     }
 
-    private fun initData()
-    {
+    private fun initData() {
         mImages.add(R.drawable.artinst)
         mNames.add("Art Institute of Chicago")
         mInfo.add(R.string.info_art_institute)
